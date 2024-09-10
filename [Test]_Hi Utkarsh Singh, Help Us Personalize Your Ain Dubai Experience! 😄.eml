@@ -1,0 +1,619 @@
+Received: from SA1PR05MB8079.namprd05.prod.outlook.com (2603:10b6:806:1a1::8)
+ by SJ0PR05MB8520.namprd05.prod.outlook.com with HTTPS; Thu, 5 Sep 2024
+ 07:53:43 +0000
+Received: from BN9PR03CA0510.namprd03.prod.outlook.com (2603:10b6:408:130::35)
+ by SA1PR05MB8079.namprd05.prod.outlook.com (2603:10b6:806:1a1::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7918.25; Thu, 5 Sep
+ 2024 07:53:38 +0000
+Received: from BN1PEPF00005FFC.namprd05.prod.outlook.com
+ (2603:10b6:408:130:cafe::da) by BN9PR03CA0510.outlook.office365.com
+ (2603:10b6:408:130::35) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7939.14 via Frontend
+ Transport; Thu, 5 Sep 2024 07:53:38 +0000
+Authentication-Results: spf=pass (sender IP is 159.92.162.121)
+ smtp.mailfrom=bounce.explore.aindubai.com; dkim=pass (signature was verified)
+ header.d=explore.aindubai.com;dmarc=pass action=none
+ header.from=explore.aindubai.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of
+ bounce.explore.aindubai.com designates 159.92.162.121 as permitted sender)
+ receiver=protection.outlook.com; client-ip=159.92.162.121;
+ helo=mta.explore.theroxycinemas.com; pr=C
+Received: from mta.explore.theroxycinemas.com (159.92.162.121) by
+ BN1PEPF00005FFC.mail.protection.outlook.com (10.167.243.228) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7918.13 via Frontend Transport; Thu, 5 Sep 2024 07:53:37 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=51dkim1; d=explore.aindubai.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=buzz@explore.aindubai.com;
+ bh=kXnSrBs/UA/buDaL/5Z3fAuUd8GLWxtyADix5W6H+vk=;
+ b=eEY0bwC7GpaeF/WfYpIPILyXrura95ZTiF/S5DytAjgmObyOCqR1Tywl5IEloxP7I+ErSGQIJoTu
+   LzOlum+xMwgaV1k2VE9LH2YYjBdHc/uyFBAfZl5VfJuDoKlYVJXUc7PAEynhWfh7wzUSRvjFfNUG
+   91ce1cjMWmm7H4jYRvsW9VJuvp/RxoUHawk1LCC2kAblF4WjuOPW3Gkk7lGgfd+et/gHyL7U9L1M
+   J8yVEIIc6ejEfFWQRT/njBUZFEjjIxGW8zZCDbvtG6xFlMnY2zVgsEgAK5AanB4RgmavulkflOXL
+   fQsNAzK2z0aqA6iENJ0xnSzZlx/acWwEVFYswA==
+Received: by mta.explore.theroxycinemas.com id hr5ho22fmd4m for <ssinha@horizontal.com>; Thu, 5 Sep 2024 07:53:34 +0000 (envelope-from <bounce-6V5FWSXWGH4EJAIRGCWZ43FLTE.510004@bounce.explore.aindubai.com>)
+From: "Ain Dubai" <buzz@explore.aindubai.com>
+To: <ssinha@horizontal.com>
+Subject: =?UTF-8?B?W1Rlc3RdOkhpIFV0a2Fyc2ggU2luZ2gsIEhlbHAgVXMgUGVyc29u?=
+ =?UTF-8?B?YWxpemUgWW91ciBBaW4gRHViYWkgRXhwZXJpZW5jZSEg8J+YhA==?=
+Date: Thu, 05 Sep 2024 01:53:34 -0600
+List-Unsubscribe: <https://click.explore.aindubai.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MzYwMDY2NTMiLCJzIjoiODMwNDI5NjIiLCJsaWQiOiI2MyIsImoiOiIyNjA2NDMiLCJqYiI6IjEiLCJkIjoiNTEwMDA0In0.qcZ0wkQkNOtcpOc9Q_cJrOY8zQyR7-c8_MxmI9kE5Wk>, <mailto:leave-LUDBCJARL3ZE5HGHJUFIY2CZ7I.510004@leave.explore.aindubai.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Reply-To: "Ain Dubai" <reply-M2GMQIBXHMWEFCOL66EOWZA33M.510004@explore.aindubai.com>
+X-SFMC-Stack: 51
+x-job: 536006653_260643
+Message-ID: <cc937b2e-c57a-48be-93ef-5250893f8ae1@cdg3s51mta163.xt.local>
+Content-Type: multipart/alternative;
+	boundary="uSJePnDEhpvq=_?:"
+Return-Path:
+ bounce-6V5FWSXWGH4EJAIRGCWZ43FLTE.510004@bounce.explore.aindubai.com
+X-MS-Exchange-Organization-ExpirationStartTime: 05 Sep 2024 07:53:38.0003
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 70b1983c-cfc2-4bba-7a2b-08dccd7fd9e5
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 4c31935f-277d-4f84-bc78-b2d637b109d9:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ BN1PEPF00005FFC:EE_|SA1PR05MB8079:EE_|SJ0PR05MB8520:EE_
+X-MS-Exchange-Organization-AuthSource:
+ BN1PEPF00005FFC.namprd05.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: 70b1983c-cfc2-4bba-7a2b-08dccd7fd9e5
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam:
+ BCL:0;ARA:13230040|1032899013|69100299015|5063199012|4022899009|4123199012|5073199012;
+X-Forefront-Antispam-Report:
+ CIP:159.92.162.121;CTRY:FR;LANG:en;SCL:-1;SRV:;IPV:NLI;SFV:SKN;H:mta.explore.theroxycinemas.com;PTR:mta.explore.theroxycinemas.com;CAT:NONE;SFS:(13230040)(1032899013)(69100299015)(5063199012)(4022899009)(4123199012)(5073199012);DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 05 Sep 2024 07:53:37.7190
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 70b1983c-cfc2-4bba-7a2b-08dccd7fd9e5
+X-MS-Exchange-CrossTenant-Id: 4c31935f-277d-4f84-bc78-b2d637b109d9
+X-MS-Exchange-CrossTenant-AuthSource:
+ BN1PEPF00005FFC.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR05MB8079
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:05.4243780
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7918.023
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?aXl4bmpEMTRPTEJKTDhHNVgvL3JVWlBWRGZRUlhDNUhPb0NJYkQ0anJ2L0tz?=
+ =?utf-8?B?NnY1LzgrNkg2RHU3Tm9PTzhRR2NENXROUjBEUFZUSStmdzA2dXJTUmtFMVZh?=
+ =?utf-8?B?UTRJMkJ0M1R2NmRGQ2twdC9yZUU4eDFiVHJPKytueTI1d2wraWNXTEdPcHRy?=
+ =?utf-8?B?TmJoNjBtcDEyOXFFZWR6bTRoT0ppdWpQMDJlOVVYdkdLNXBXOFlDVklNMkRB?=
+ =?utf-8?B?TGEvN0RjN3RxWmtqVkpNaWZsR0hRczZ0WmM1bDZZTlZEZ1duaDg4VHNHelVx?=
+ =?utf-8?B?ekxtTjhnRXVpOUJmTUM0em42bnhXREpUTnhMTTVWdEZIWUFZVjdGemhHQUZL?=
+ =?utf-8?B?VGU4b2ZjQVpidTFNenVLQS84bkYzeUltSmxkajZuTUZ5eFVXVEtid2J4NjI5?=
+ =?utf-8?B?Y200dE1rSVc4QytmcXNtWDRzUDRyMk84RmEyVUc5cHpwTnRLeHU4WTlCdmxm?=
+ =?utf-8?B?L3ZydUNBcjV0YnpBcHVUc2I0QUxzMERtZVdhSWZlamM0R1hWcjc0a21sdEta?=
+ =?utf-8?B?VkdXR2Zxb3VnZ2FWeHUxQjZ5YmZxRmxlWnZtajVhZDNmZXl1cUwxd05SQU5K?=
+ =?utf-8?B?eTl3SkRWcXovWnBxaWVqSjVHM1laMEVrVWlWVndHa0FyaUsvS1ZkaldCVGZB?=
+ =?utf-8?B?ODFObEhlRlk5NC9LZkRGVjgwb2hXUlJuNnpvQkJPcnpNdnBaT0RrMDM1dmpJ?=
+ =?utf-8?B?NkRxbGo1SEw3NWNBZ25IcjJZZ1A1TWE5djhxbTE5QkxjQ1JRK2o5OGQ3eVd0?=
+ =?utf-8?B?c3dKak1qREN0S2Mrc3lwS00zYWFGclN0L2FYZVRmUzdSWTRuQkNYTWdWMmJE?=
+ =?utf-8?B?M3RqSGJVTlRaMFppd0NnaUhOWHIzL0pjVThmNXYvc203YUtYWTgwZ2tYV0dF?=
+ =?utf-8?B?SUY3TjNremptejVwbHlRYmszdkIwbnpLVWpVaE5uZW5jQmVZN3BSOElNOFRX?=
+ =?utf-8?B?SFd5YUZoRUhYK3FqcTI5QkZ1dWVNbUxTR3NWd2RKWUs0dDhnZW9XUGxyWkFV?=
+ =?utf-8?B?SlBQSkY5SFZiVjF6cHl1ZDF0aXZPYXllbVZ0K1ZQdHoxTm1pbjFCVjNZTXlW?=
+ =?utf-8?B?aC91L3lrRnBsQjU3VWdhNVJ5S1FIeExYbnF1S2RZVWF1MXdvNlVnRGJZaDRT?=
+ =?utf-8?B?MkpWOThaMVJEYkt6eGtJRFdKVGxjUkpDajZqb3ArUXBPS0plcTJBQ28xQ0hh?=
+ =?utf-8?B?aC9IQ2M5T1FnRVc4RmlvbzAzajRPS0VLd2V5VVRLeGdDdERhRCtXTE5NblAz?=
+ =?utf-8?B?ODdPbXlKMUVzNzROSUdQSXZSYVIwa0NNakhQeCtWeVcrR0FTczc4TDhrMk03?=
+ =?utf-8?B?VE1TdGJSdmNBc0Q3cUZGSHNQbTllTGdQMHI4SGZSQlp1OUFuZVNxbXk5ejBL?=
+ =?utf-8?B?VXIxdXNlbUo4MnFSaUpqcmtHbE1aRTVybjc2SjZ6aS9aS05BYjV2ZzUzZ3RU?=
+ =?utf-8?B?SnRieE1QckpUWUowVUZVNVQzVUVHUXpYamtNM2dKSXRkMzhOZnpwVzBtbVZ5?=
+ =?utf-8?B?VUtwb21PUVYwWHRER2wxYkpNUWtic3VOUU1HN1Fzc09xdVVJQ0c2SFVLZThS?=
+ =?utf-8?B?b2FGRTZrc01wZE42UlJQNmtHMUI4WUwwQ1QvOUV3UFJlcTdkNmhVTVlVREQ3?=
+ =?utf-8?B?RDVxLzd3QkQwN1dQRURua3JXc2JyVmFubVFHSXFyT0ZYUWRhdU9NWXNlZG5E?=
+ =?utf-8?B?U0J1L3Nid3I5d1BIb3hsTm1zTHE1V2I0SWxGSGI1SjgxZUk3ZDRWRzN6VS9E?=
+ =?utf-8?B?ckxIam1BN0ZqTnNtb0FRSEdWZkgweGNrcUtVYlp5bGlLRFdVUG5iUmRKYVlu?=
+ =?utf-8?B?WkwxdU8vNEhIWnpVVkE4V3h1MitUejVoOTFwdmkrQXcwaEExdXFCdkYwdzh3?=
+ =?utf-8?B?OTkwWXYrcGZIeWpCUFdYTFM0NlJ6S3NVSjNTdWNIYnZwN2JRaXFJU2kxV2gw?=
+ =?utf-8?B?RXp4VFprclM5RWU1TFdkKzQ4Qmw5b0kwNWRiWHdqd0FheTdPL1NwbE90c1dq?=
+ =?utf-8?B?K21hdWx6Sm9TcThrcmc1YXg1dHBSMkVJZzFZaWNZWmRCTjlyQWJIajAvYi9h?=
+ =?utf-8?B?YnNoMEowcHV3WmdxTDh2dWlvbHF5bitRV2ZJbHI2MmNzMFZXZ0gyTmZFT3R2?=
+ =?utf-8?B?dGdKZ09McjhLVkJIZnd2UDZ1M2x6VDcrZ0Y1WHM3d3BOK3l1YVRvRnhBL09H?=
+ =?utf-8?B?bnBGYXlRcnlTNWIrbk5FSk9LUENSSHZrNkk1SzQreUo4VllEQStOSUhnU04r?=
+ =?utf-8?B?MWtIZHJ1ZTJxVHVmb2lxTWUvS1lxYzJCeEx6cmNCVFlBQUZHWnVIOTJ0NG9o?=
+ =?utf-8?B?T093dm5BankrK0dZMzNkUWpwVjJRUmVxUTIwcHExRXhCVCtBcUpZUUdZVUtp?=
+ =?utf-8?B?Ylk0R1pOQkl0SGtVYkdGUGJTbTJTbkdvYXFLMXdrQ1FlWEpDYllhLzVuK052?=
+ =?utf-8?B?NWFlMXRFdklXQlp1b3JYQnpGWjBITEl1UlpvYnFDRTllWlgxeXcvVWdNdEdi?=
+ =?utf-8?B?eUlNQW9oSjVTN1pDalU1U2NQMmVPRW1oWWJiSnRwajNVNEF4dUd1b2dpbEMz?=
+ =?utf-8?B?NDlOdEJKbjBCSm9obHphM0ZsbW1hMlBKaitkM2VUSWhaeGdkclh6dDgwSk9C?=
+ =?utf-8?B?WHI3QjFlWnNTa0t2amd6TXNFSGJRWnlvK0VhSER5M1IwTjMvUFlNOFZINFZ4?=
+ =?utf-8?B?TUsxVzlZQWNlRDE5am1jNnJQczNRczdLaHR2dlpyQTFPUEhRSFBCNXVoL0sv?=
+ =?utf-8?B?M2JIYTVmYXBHUlM3dzR5YkFvcVFCK1E4THRDeG1qRnlPYWNjTERZeWxjc2ZN?=
+ =?utf-8?B?a1hjaU5yVEtmUnlBUHdaNmZIL0VJeWNka2RLc3hPSGt3cCtGN1NUUDBLQ2Iw?=
+ =?utf-8?B?U3FIZllHakpaNjQ5blVObDJLZklySHc2TElUbUJ1WHgrTnRPQUt6YXg2WFJs?=
+ =?utf-8?B?VnJ0alJaS3BXNWVkOUpqNXpqQ3dVNEJYbm10YkhuUzM1emtzdGFDOHQvR3lZ?=
+ =?utf-8?Q?Ow9jXP64BMs/lw=3D?=
+MIME-Version: 1.0
+
+--uSJePnDEhpvq=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+ To view this email as a web page, go to the link below, or copy and paste it into your browser's address window.
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698ab43a3de2e97d20d5ce1ef3372ec253efc8873b8ed9b55e06811e3283bee9b0e7f8ac4e78f46b242e98d750e0f6e53e5
+ 
+
+ 
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6982d18621fa61de2977d3af8fbba452a0907588faa5fe5caf19cc1d0a11fedf81214fbb2513f87a0b9455fe2d6df838393 
+
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698ab43a3de2e97d20d5ce1ef3372ec253efc8873b8ed9b55e06811e3283bee9b0e7f8ac4e78f46b242e98d750e0f6e53e5 
+View Online 
+
+
+
+
+ 
+
+ 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6982d18621fa61de2977d3af8fbba452a0907588faa5fe5caf19cc1d0a11fedf81214fbb2513f87a0b9455fe2d6df838393 
+Hi Utkarsh Singh
+
+With exciting new experiences and features at Ain Dubai, we want to ensure your visits are as enjoyable and personalized as possible. To help us serve you better, we'd love to learn more about you and your preferences. 
+
+ As a token of our appreciation, we're thrilled to offer you a chance to win an exclusive VIP Experience at Ain Dubai! Enjoy a private cabin with stunning 360-degree views of Dubai, complimentary beverages, and a special behind-the-scenes tour.
+
+How to win:
+
+1. Update your profile, interests, and preferences [in the section below].
+
+2. Follow @aindxbofficial on Instagram.
+
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6982d18621fa61de2977d3af8fbba452a0907588faa5fe5caf19cc1d0a11fedf81214fbb2513f87a0b9455fe2d6df838393 
+
+Don't miss this incredible opportunity to enhance your Ain Dubai experience and create unforgettable memories. Your feedback is invaluable to us, and we look for- ward to making your future visits even more special.
+
+
+Thank you for being a part of Ain Dubai Family!
+
+
+Best regards,
+Ain Dubai Team
+ 
+
+
+
+ 
+
+ 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6982d18621fa61de2977d3af8fbba452a0907588faa5fe5caf19cc1d0a11fedf81214fbb2513f87a0b9455fe2d6df838393 
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6982d18621fa61de2977d3af8fbba452a0907588faa5fe5caf19cc1d0a11fedf81214fbb2513f87a0b9455fe2d6df838393 
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6982d18621fa61de2977d3af8fbba452a0907588faa5fe5caf19cc1d0a11fedf81214fbb2513f87a0b9455fe2d6df838393 
+COOKIE POLICY        
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698b5dd3f9e4821babf2be3aec033fd347856e80cfc67efb5aa35ac3a6a99ceebf281025d7dd524566f1a18cf86a9fb419a 
+FAQS        
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69895d0412227bd046ed19ca7d892454c60a87f1836720c130e71056f847fb94610ab3d7903f9b19f0820875bcba9327342 
+CONTACT US 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d1bbc0a081f9deb902053d10b3364825d9e926dcc7b31f4ba23607cfdd84c363465844488633ad2a6db59a436699fc03 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698bc2bfc73ca4aba2d9a35f30700de0c06a5dfd125480f5b98918d107f36bf3b5dad1b82a56bd7df36898ce766f790650e 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d3996aef8d5c8642004899ab2c7f53f5f415ea2c14261c64140e52142ab4e9f4f56ad74eea948652fe4acdbb6ce6cbe5 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698a7d489a36292abf5b6c50330622280a6d9d56d3e489976b7dfff6a3057b9c3d3be183c222e4ebba36894319312d4f105 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698e4439a7a56e21ab8a01a092de9c340b77d3238a19aaf390d2ffeb76c47fc9c08ad70a79bd9f9536c241c8d6cfa99bbd4 
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d1bbc0a081f9deb902053d10b3364825d9e926dcc7b31f4ba23607cfdd84c363465844488633ad2a6db59a436699fc03 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698bc2bfc73ca4aba2d9a35f30700de0c06a5dfd125480f5b98918d107f36bf3b5dad1b82a56bd7df36898ce766f790650e 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d3996aef8d5c8642004899ab2c7f53f5f415ea2c14261c64140e52142ab4e9f4f56ad74eea948652fe4acdbb6ce6cbe5 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698a7d489a36292abf5b6c50330622280a6d9d56d3e489976b7dfff6a3057b9c3d3be183c222e4ebba36894319312d4f105 
+
+
+
+@ 2021 Ain Dubai | 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698007a4e02bca3324f2b6e60b93378beeac14b61264814d254235932934b18dede10b1f3952a21b91e351caa5930686ce6 
+Privacy Notice  | 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6980460537b61a7249173387245088a785b595050a210327b0db9d3fe267cc1a4b772e0e425e178738b81ed588fb51342c1 
+Cookie Notice  | 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69831974963b650dbc42d5978aeae4b0a08f38af183bfd6b1569f4e0ead41a0f8f0dde6611ef6e3f871e389264c283739cb 
+Terms and Conditions 
+@ 2024 Ain Dubai | 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69880fa71a42c7e4f1d6678b89e8debd0cae52551c4987db74a50557a1a991d639f457604bf064cddd621018d45139106a5 
+Privacy  Policy | 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6980460537b61a7249173387245088a785b595050a210327b0db9d3fe267cc1a4b772e0e425e178738b81ed588fb51342c1 
+Cookie Notice  | 
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69831974963b650dbc42d5978aeae4b0a08f38af183bfd6b1569f4e0ead41a0f8f0dde6611ef6e3f871e389264c283739cb 
+Terms and Conditions 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d88a9921f584c85a56b31241721845fab4bf4f0b9893a6214e321df4449885ea3ce0ee2450be2f9d989824e5d5edd64f 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69880931f5f6768b4cadf4e37d35b6fb4a56ab7e6342526c12289e614fb1bbb225b517478ffc788a2d0683ba33d8a7bd273 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69836e7abf776616a22223556e678771632b61ee13d1545107b04c8e37eaf8f5d450ee241c3156e80bcb8d89974f03eac15 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d88a9921f584c85a56b31241721845fab4bf4f0b9893a6214e321df4449885ea3ce0ee2450be2f9d989824e5d5edd64f 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69880931f5f6768b4cadf4e37d35b6fb4a56ab7e6342526c12289e614fb1bbb225b517478ffc788a2d0683ba33d8a7bd273 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698220e6c1441b4d7ab5ff411d1d550edf7d4f924e613f311494a620e3307512542edadfe3ae7fce2d5ab1db2f3d2007ce1 
+
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d88a9921f584c85a56b31241721845fab4bf4f0b9893a6214e321df4449885ea3ce0ee2450be2f9d989824e5d5edd64f 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69880931f5f6768b4cadf4e37d35b6fb4a56ab7e6342526c12289e614fb1bbb225b517478ffc788a2d0683ba33d8a7bd273 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69836e7abf776616a22223556e678771632b61ee13d1545107b04c8e37eaf8f5d450ee241c3156e80bcb8d89974f03eac15 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d88a9921f584c85a56b31241721845fab4bf4f0b9893a6214e321df4449885ea3ce0ee2450be2f9d989824e5d5edd64f 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69880931f5f6768b4cadf4e37d35b6fb4a56ab7e6342526c12289e614fb1bbb225b517478ffc788a2d0683ba33d8a7bd273 
+
+https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698220e6c1441b4d7ab5ff411d1d550edf7d4f924e613f311494a620e3307512542edadfe3ae7fce2d5ab1db2f3d2007ce1 
+
+
+
+
+If you want to unsubscribe from our mailing list, 
+https://click.explore.aindubai.com/unsub_center.aspx?qs=415c68826cb764eb487d90d481e7c1e7b3b8bafea86e21b094bff463c9c1dab290a240da64cb7e380cfdbdc1d58b0c3e486e1a640588c062b77314341e2afda4 
+Unsubscribe here.
+
+| 
+https://click.explore.aindubai.com/profile_center.aspx?qs=415c68826cb764eb206b0b33628f04a52c07adcca9530f7eac84346ace3c2d3617cae15b5944803aa2323f05eb39d0465125df9a7ed90eedaf62c7073563f919 
+My Profile | 
+https://click.explore.aindubai.com/subscription_center.aspx?qs=415c68826cb764eb487d90d481e7c1e7b3b8bafea86e21b094bff463c9c1dab22df81d77de33658e0bfac01e375af9320d57ec57dc464286745f269a138d37f0 
+My Preferences | 
+mailto:amazingservice@dubaiparksandresorts.com?subject= 
+Contact Us
+
+This email was sent by: Ain Dubai L.L.C
+Bluewaters Island Dubai Dubai, Dubai, 66000, AE
+
+https://click.explore.aindubai.com/profile_center.aspx?qs=415c68826cb764eb206b0b33628f04a52c07adcca9530f7eac84346ace3c2d3617cae15b5944803aa2323f05eb39d0465125df9a7ed90eedaf62c7073563f919 
+Update Profile 
+
+ 
+ 
+
+
+ ----------------------------------------
+	
+	This email was sent by:
+	Ain Dubai L.L.C
+	Bluewaters Island Dubai
+	Dubai, Dubai, 66000, AE
+	
+	We respect your right to privacy - visit the following URL to view our policy.
+	( https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698a99aef3e8a5ee6cf3688ec4c01b0bd8a4ae719297d5876b1d3f801a4388547747860262e1fe4acc5d731c990f7c76efc )
+	
+	----------------------------------------
+	
+	Visit the following URL to manage your subscriptions.
+	( https://click.explore.aindubai.com/subscription_center.aspx?qs=415c68826cb764eb487d90d481e7c1e7b3b8bafea86e21b094bff463c9c1dab22df81d77de33658e0bfac01e375af9320d57ec57dc464286745f269a138d37f0 )
+	
+	Visit the following URL to update your profile.
+	( https://click.explore.aindubai.com/profile_center.aspx?qs=415c68826cb764eb206b0b33628f04a52c07adcca9530f7eac84346ace3c2d3617cae15b5944803aa2323f05eb39d0465125df9a7ed90eedaf62c7073563f919 )
+	
+	Visit the following URL to unsubscribe.
+	( https://click.explore.aindubai.com/unsub_center.aspx?qs=415c68826cb764eb487d90d481e7c1e7b3b8bafea86e21b094bff463c9c1dab290a240da64cb7e380cfdbdc1d58b0c3e486e1a640588c062b77314341e2afda4 )
+	
+ 
+
+
+--uSJePnDEhpvq=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}
+      p { margin: 1em 0;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      @-ms-viewport{ width: device-width;}
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        .container {width: 100% !important;}
+        .footer { width:auto !important; margin-left:0;border-right: 0px solid !important; display: flex !important; align-items: center !important; justify-content: center !important;}
+        .sponsors { 
+          width:auto !important;
+          padding-left: 0px !important;
+    padding-top: 10px;
+        }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        img { max-width:100% !important; height:auto !important; max-height:auto !important; align-items: center !important;}
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+body, .tb_properties{font-family: Arial !important; font-size: 10px !important; color: #808080 !important; line-height: 1.15 !important; padding: 0px !important; }.buttonstyles{font-family: Arial, helvetica, sans-serif !important; font-size: 10px !important; color: #FFFFFF !important; padding: 10px !important; }h1{font-family: Arial !important; font-size: 14px !important; color: #202020 !important; line-height: 1 !important; }h2{font-family: Arial !important; font-size: 12px !important; color: #202020 !important; line-height: 1 !important; }h3{font-family: Arial !important; font-size: 11px !important; color: #202020 !important; line-height: 1 !important; }a:not(.buttonstyles){line-height: 1 !important; }.mobile-hidden{display: none !important; }.responsive-td {width: 100% !important;
+ display: block !important; padding: 0 !important;}
+/* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+      }
+      @media only screen and (max-width: 640px) {
+        .container { width:100% !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        .photo img { width:100% !important; height:auto !important;}
+        .nav5, .nav6 { display: none !important;}
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+    </style>
+    <!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */           body, table, td {               font-family: Arial, Helvetica, sans-serif ;               font-size:16px;               color:#000000;               line-height:1;           }           /* End Outlook Font Fix */       </style>     <![endif]-->
+  </head>
+  <body bgcolor="#ffffff" text="#000000" style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Update your profile and win an exclusive VIP experience at Ain Dubai! Enhance your visit with stunning views and behind-the-scenes access. Don’t miss out!</div>
+    <div style="font-size:0; line-height:0;"><img src="https://click.explore.aindubai.com/open.aspx?RG2VE7VZHMBUDIHNK4WQ3IKQCE.510004&amp;d=510004&amp;bmt=0" width="1" height="1" alt=""></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td align="center" valign="top">
+           
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table class="tb_properties border_style" style="background-color:#FFFFFF;" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <!-- added padding here -->
+                          <td class="content_padding" style="">
+                            <!-- end of comment -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr> <!-- top slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                          <td align="left" valign="top">
+                                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                                              <tbody>
+                                              <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 0px 20px; " class="stylingblock-content-wrapper camarker-inner">
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 10px 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" style="width: 50%; padding-right: 5px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left">
+<a href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b952ef21ad48d4a3cc9a996ea8c4b13a9b38e5ded615c0ba41b82663f276ff470d43e4d24cfbbd8a5db850bc64f72abda" title="" data-linkto="https://"><img data-assetid="127704" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/77e949b2-ee0c-4e6c-a6f5-88d1c225fa24.png" alt="" height="57" width="120" style="display: block; padding: 0px; text-align: left; height: 57px; width: 120px; border: 0px;"></a></td></tr></table></td></tr></table></td>
+<td valign="top" style="width: 50%; padding-left: 5px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 40px 0px 0px; " class="stylingblock-content-wrapper camarker-inner">
+      
+<table width="300" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto;">
+  <tr>
+    <td class="main_container">
+      <!--[if (gte mso 9)|(IE)]>       <table width="300" align="center">         <tr>           <td width="200">           <![endif]-->
+            <table border="0" cellpadding="0" cellspacing="0" width="200" align="left" class="left_column">
+              <tr>
+                <td style="padding:0px;">
+                 
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>           </td>           <td width="100">           <![endif]-->
+            <table border="0" cellpadding="0" cellspacing="0" width="100" align="right" class="right_column">
+              <tr>
+                <td style="text-align:right;padding:0px;">
+                  <span style="float: right;"><a href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b1f07146d4c0c8621c2ce8c5e900a4333220840d2742086da55d8d379c63331e3dc3f9b871d31d1a2078796dbd669e74a" target="_blank" style="color: #6c6c6c; text-decoration: underline;">View Online</a></span>
+                </td>
+              </tr>
+            </table>
+          <!--[if (gte mso 9)|(IE)]>           </td>         </tr>       </table>       <![endif]-->
+    </td>
+  </tr>
+</table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                                                </td>
+                                              </tr>
+                                                <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 0px 20px; " class="stylingblock-content-wrapper camarker-inner">
+
+   
+<a href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b952ef21ad48d4a3cc9a996ea8c4b13a9b38e5ded615c0ba41b82663f276ff470d43e4d24cfbbd8a5db850bc64f72abda" style="text-decoration: none;">
+<span>
+
+     <table width="600" cellpadding="0" cellspacing="0" align="center" style="margin:0 auto">
+ <tr>
+      <td height="252" width="640" align="center" background="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/4895d760-3e59-4803-bf4b-61e4a73788fa.png" style="background-color:#ffffff;background-size:cover">
+            <!--[if gte mso 9]>             <v:rect xmlns:v="urn:schemas-microsoft-com:vml"  href="https://aindubai.com/en" fill="true" stroke="false" style="width:600px;height:252px">             <v:fill type="frame" src="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/4895d760-3e59-4803-bf4b-61e4a73788fa.png" />             <v:textbox inset="0,0,0,0" style="v-text-anchor:middle">             <![endif]-->
+            <div>
+            <table cellpadding="0" cellspacing="0" classname="arb_w100 " align="center" style="margin:0 auto">
+                
+                    <tr>
+                        <td valign="bottom" classname="arb_headline_1" style="padding-bottom: 20px; height:220px; ">
+                          <span style="font-size: 22px; font-weight: bold; line-height: 28px; color: rgb(255, 255, 255);">Hi Utkarsh Singh</span>
+                        </td>
+                    </tr>
+                
+            </table>
+            </div>
+            <!--[if gte mso 9]>             </v:textbox>             </v:rect>             <![endif]-->
+        </td>
+        
+    </tr>
+
+</table>
+</span></a></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px 20px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%; padding-bottom: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="font-family: Arial; line-height: 115%;">
+	<span style="font-size:14px;"><span style="color:#7f8c8d;">With exciting new experiences and features at Ain Dubai, we want to ensure your visits are as enjoyable and personalized as possible. To help us serve you better, we'd love to learn more about you and your preferences.&nbsp;</span><br>
+	&nbsp;</span></div><div style="line-height: 115%;">
+</div><div style="font-family: Arial; line-height: 115%;">
+	<span style="font-size:14px;"><span style="color:#7f8c8d;">As a token of our appreciation, we're thrilled to offer you a chance to win an exclusive VIP Experience at Ain Dubai! Enjoy a private cabin with stunning 360-degree views of Dubai, complimentary beverages, and a special behind-the-scenes tour.<br>
+	<br>
+	<b>How to win:</b><br>
+	1. Update your profile, interests, and preferences [in the section below].<br>
+	2. Follow @aindxbofficial on Instagram.</span></span></div></td></tr></table></td></tr></table></td></tr><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%; padding-top: 3px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 15px 0px 30px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b952ef21ad48d4a3cc9a996ea8c4b13a9b38e5ded615c0ba41b82663f276ff470d43e4d24cfbbd8a5db850bc64f72abda" title="" data-linkto="https://">
+<img data-assetid="129867" src="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/06f8cde2-7855-44db-b003-53428b3ca0bf.png" alt="Win Now" height="40" width="140" style="display: block; padding: 0px; text-align: center; height: 40px; width: 140px; border: 0px;"></a></td></tr></table></td></tr>
+</table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="font-family: Arial; line-height: 115%;">
+	<span style="font-size:14px;"><span style="color:#7f8c8d;">Don't miss this incredible opportunity to enhance your Ain Dubai experience and create unforgettable memories. Your feedback is invaluable to us, and we look for- ward to making your future visits even more special.<br>
+	<br>
+	Thank you for being a part of Ain Dubai Family!<br>
+	<br>
+	Best regards,<br>
+	<b>Ain Dubai Team</b></span></span></div><div style="font-family:Arial;">
+	&nbsp;</div></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                                                </td>
+                                              </tr>
+                                                <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; border-top: 0px; border-right: 0px; border-bottom: 1px solid #DDDDDE; border-left: 0px; " class="stylingblock-content-wrapper"><tr><td style="padding: 30px 10px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 17%; padding-right: 4px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner">
+<table width="100%" cellspacing="0" cellpadding="0" role="presentation" class="footer" style=" border-right: 1px solid #DDDDDE; padding-right: 20px; ">
+  <!--[if (gte mso 9)|(IE)]>        <table width="100%" cellspacing="0" cellpadding="0" role="presentation" class="footer" style="padding-right: 20px;">       <![endif]-->
+  <tr><td align="center"><a href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b952ef21ad48d4a3cc9a996ea8c4b13a9b38e5ded615c0ba41b82663f276ff470d43e4d24cfbbd8a5db850bc64f72abda" title="" data-linkto="https://"><img data-assetid="127718" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/e12749e1-7b4d-4dda-8079-faeb2c729496.png" alt="" height="51" width="106" style="display: block; text-align: center; height: 51px; width: 106px; border: 1px solid transparent;"></a></td></tr>
+<!--[if (gte mso 9)|(IE)]>        </table>       <![endif]-->
+</table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation" class="footer" style=" border-right: 1px solid #DDDDDE; padding-right: 20px; ">
+  <!--[if (gte mso 9)|(IE)]>        <table width="100%" cellspacing="0" cellpadding="0" role="presentation" class="footer" style="padding-right: 20px;">       <![endif]-->
+  <tr><td align="center"><a href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b952ef21ad48d4a3cc9a996ea8c4b13a9b38e5ded615c0ba41b82663f276ff470d43e4d24cfbbd8a5db850bc64f72abda" title="" data-linkto="https://"><img data-assetid="127718" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/e12749e1-7b4d-4dda-8079-faeb2c729496.png" alt="" height="55" width="110" style="display: block; text-align: center; height: 55px; width: 110px; border: 1px solid transparent;"></a></td></tr>
+<!--[if (gte mso 9)|(IE)]>        </table>       <![endif]-->
+</table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 52%; padding-left: 2px; padding-right: 2px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 20px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<span style="font-size:11px;"><span style="color:#7773b6;"><a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bc337d3d0a0a70a557d4ad28bb158481d7d0bc408f12aebd71467a519b98cbab5f3ff0a3b832fb850dd5ea8789369f439" style="color:#7773b6;text-decoration:none;" title="COOKIE POLICY">COOKIE POLICY</a>&nbsp; &nbsp; &nbsp; &nbsp;<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b14e1412e99294ca9cf736d4f486bf9047786e99e4fee5f92a2c1d5e0b5abb676e83405f7682bc8714ef1c514e8668f9d" style="color:#7773b6;text-decoration:none;" title="FAQS">FAQS</a>&nbsp; &nbsp; &nbsp; &nbsp;<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b4f5b6cd10a5db72d1db1718813ef206ae86cf0664af06c7a85d3c864e0b220026ff3bec40f46b49311e19dd1ba1b1675" style="color:#7773b6;text-decoration:none;" title="CONTACT US">CONTACT US</a></span></span></div></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 31%; padding-left: 4px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 0px 0px 10px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bd491021b4253c5a5857ce26f0371e96909352d193d9420207aa20b674a223322332b6e5eee5b2da6e8b6cd2c721044de" title=""><img alt="" data-assetid="127728" height="26" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/d6428c50-939d-4742-a51d-4717240f7844.png" style="padding: 0px 0px 0px 1px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a><a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bb976ceac1e54108b6597ca1a77a50d2ac8355d03484685bc7e324268ba58cf16720e0848fb204724182137d044c781b9" title=""><img alt="" data-assetid="127727" height="26" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/b773a5b1-221c-458a-9658-98993d57c011.png" style="padding: 0px 0px 0px 1px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a>
+<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bd5bb6f4a73960f01df1e4bfc979a73cef0674bdbcafc13869f5966ebb0259c821d192982bd5792144f16f48afa7b3245" title=""><img alt="" data-assetid="127726" height="26" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/0f1baf2e-8abb-4f9e-8056-de2164c1856e.png" style="padding: 0px 0px 0px 1px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a><a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b6835d4d437499c5d289fc71717f0f244b538432f2f67a628309a5b3b6de8666be36412f96a23655a865caf1a043684b2" title=""><img alt="" data-assetid="127873" height="26" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/7d094338-f8be-4e3f-b6ce-9562aec315ba.png" style="padding: 0px 0px 0px 1px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a>
+<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bcc9b3432131fc9dcff7242dfa3408576f51b117dd019cdeb8cdef33bcd8526ac7809f7785bbbe3170f00a186ea7badf0" title=""><img alt="" data-assetid="127874" height="26" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/b52675fc-be9b-4fc8-aada-a794b398f1c0.png" style="padding: 0px 1px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 0px 0px 10px; " class="stylingblock-content-wrapper camarker-inner">
+<table align="center" width="120">
+  <!--[if (gte mso 9)|(IE)]> <table align="center" width="120"> <![endif]-->
+  <tr>
+    <td width="30">
+      <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bd491021b4253c5a5857ce26f0371e96909352d193d9420207aa20b674a223322332b6e5eee5b2da6e8b6cd2c721044de" title=""><img alt="" data-assetid="130207" height="26" src="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/69ae53a5-cbdb-4d95-b748-22ccbe5ac636.png" style="padding: 0px 0px 0px 0px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a>
+    </td>
+    <td width="30">
+    <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bb976ceac1e54108b6597ca1a77a50d2ac8355d03484685bc7e324268ba58cf16720e0848fb204724182137d044c781b9" title=""><img alt="" data-assetid="130205" height="26" src="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/70755130-abfb-47e0-a3f6-74c1f99e59a7.png" style="padding: 0px 0px 0px 0px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a>
+    </td>
+    <td width="30">
+     <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3bd5bb6f4a73960f01df1e4bfc979a73cef0674bdbcafc13869f5966ebb0259c821d192982bd5792144f16f48afa7b3245" title=""><img alt="" data-assetid="130206" height="26" src="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/082db936-ded3-472f-9a1c-4605e59c34be.png" style="padding: 0px 0px 0px 0px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a>
+    </td>
+    <td width="30">
+    <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=67ddc398bacc6e3b6835d4d437499c5d289fc71717f0f244b538432f2f67a628309a5b3b6de8666be36412f96a23655a865caf1a043684b2" title=""><img alt="" data-assetid="130208" height="26" src="http://image.explore.aindubai.com/lib/fe2d11737364047b731173/m/1/b6c49203-5151-4331-a946-cc8b1301b570.png" style="padding: 0px 0px 0px 0px; text-align: left; height: 26px; width: 26px; border: 0px;" width="26"></a>
+    
+    </td>
+  </tr>
+  <!--[if (gte mso 9)|(IE)]> </table> <![endif]-->
+</table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 25px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<span style="font-size:8px;"><span style="color:#565759;">@ 2021 Ain Dubai | <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6980051bf40033b1681a0b3405cfe761c596fc2a3835f768457c76075615023c767f97878af5d6a7f696048a68f442f85f9" style="color:#565759;text-decoration:none;" title="Privacy Notice">Privacy Notice</a></span>&nbsp;| <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698ca75bdfd882e0406d050005c77f1e11830a29034a8bea2e8e348718e42dd18b406c31dc8f868fd258d7761bd534e02cc" style="color:#565759;text-decoration:none;" title="Cookie Notice">Cookie Notice</a>&nbsp;| <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69819f2d68c343452909a31c4f7d031a3990f0050d5c54079f8e1d0a50522dfcb27b259b01c5e0b3218e55771b993cbb5ed" style="color:#565759;text-decoration:none;" title="Terms and Conditions">Terms and Conditions</a></span></div></td></tr></table>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 25px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<span style="font-size:8px;"><span style="color:#565759;">@ 2024 Ain Dubai | <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698d02fac508a62341fa640b2e576d59266e3b8c1b37fcec52b2307a2f848a660e79c6a052d82d7830ca5f2caf06f6f4242" style="color:#565759;text-decoration:none;" title="Privacy Notice">Privacy </a>Policy&nbsp;</span>| <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698ca75bdfd882e0406d050005c77f1e11830a29034a8bea2e8e348718e42dd18b406c31dc8f868fd258d7761bd534e02cc" style="color:#565759;text-decoration:none;" title="Cookie Notice">Cookie Notice</a>&nbsp;| <a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f69819f2d68c343452909a31c4f7d031a3990f0050d5c54079f8e1d0a50522dfcb27b259b01c5e0b3218e55771b993cbb5ed" style="color:#565759;text-decoration:none;" title="Terms and Conditions">Terms and Conditions</a></span></div></td></tr></table></td>
+<td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" border="0" cellpadding="0" cellspacing="0" class="sponsors" style="margin:0 auto;   padding-bottom: 20px;" width="290">
+	<!--[if (gte mso 9)|(IE)]>       <table width="290" align="center" style="margin:0 auto;   padding-bottom: 20px;">                    <![endif]-->
+		<tr>
+			<td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="48.33">
+			</td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="48.33">
+			</td><td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="48.33">
+			</td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="48.33">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6985a64a37005ae6e93b7dc2850ae4fa5892da4eb9ccdc827134c9592e8533f7f7b40ed36e684435074d501b1aac688c40c" title=""><img alt="Official Automotive Partner" data-assetid="127720" height="16" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/4ae90bc6-d1a5-4937-b06b-fb91c7d754df.png" style=" height: 16px; width: 33px; text-align: center; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="48.33">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698e04c4cac084918d44c4c514b949e943fcad6ecd70728397dcb4381212e4a1dee5a68432471f492d19bac4fc46c6d3f17" title=""><img alt="Official Tire Partner" data-assetid="127719" height="10" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/90beb568-310b-441a-b78e-ad7f9744c18d.png" style="text-align: center; height: 10px; width: 33px; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="48.33">
+			</td></tr><!--[if (gte mso 9)|(IE)]>       </table>       <![endif]--></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="sponsors" style="margin:0 auto;" width="290">
+	
+		<tr>
+			<td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="48.33">
+			</td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="48.33">
+			</td><td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="48.33">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6986d676fd25ded79da542c4dbb6836c17d849a2f9d2f9f141c0b1ea59ab2b95dedad0c884d4fc3a2ec5b77c5efcb59a1c4" title=""><img alt="Dubai Holding Entertainment" data-assetid="127721" height="22" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/ce98415d-4ff7-4359-958a-18103c706f57.png" style="text-align: center; height: 22px; width: 33px; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="48.33">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6985a64a37005ae6e93b7dc2850ae4fa5892da4eb9ccdc827134c9592e8533f7f7b40ed36e684435074d501b1aac688c40c" title=""><img alt="" data-assetid="127722" height="33" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/3b8b58ba-d700-4ee1-8d83-0bde764231f6.png" style="text-align: center; height: 33px; width: 33px; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="48.33">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698e04c4cac084918d44c4c514b949e943fcad6ecd70728397dcb4381212e4a1dee5a68432471f492d19bac4fc46c6d3f17" title=""><img alt="" data-assetid="127725" height="7" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/23fc2e15-92c5-4b3f-bea6-bb6feb19593e.png" style=" height: 7px; width: 33px; text-align: center; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="48.33">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698cea1fc31de95945d7bfdac0544049161c049814d3360e624e558a6c5172f6ae329ad473b29a2b7c2c37e71802bad67b4" title=""><img alt="" data-assetid="127723" height="11" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/714408e0-f762-4bdc-93bd-e65b150ea3e5.png" style="text-align: center; height: 11px; width: 33px; border: 0px;" width="33"></a></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" border="0" cellpadding="0" cellspacing="0" class="sponsors" style="margin:0 auto;   padding-bottom: 20px;Padding-left:60px;" width="220">
+	<!--[if (gte mso 9)|(IE)]> <table width="220" align="center" style="margin:0 auto;   padding-bottom: 20px;Padding-left:60px;" class="sponsors"> <![endif]-->
+		<tr>
+			<td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="35">
+			</td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="35">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6985a64a37005ae6e93b7dc2850ae4fa5892da4eb9ccdc827134c9592e8533f7f7b40ed36e684435074d501b1aac688c40c" title=""><img alt="Official Automotive Partner" data-assetid="127720" height="16" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/4ae90bc6-d1a5-4937-b06b-fb91c7d754df.png" style=" height: 16px; width: 33px; text-align: center; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="35">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698e04c4cac084918d44c4c514b949e943fcad6ecd70728397dcb4381212e4a1dee5a68432471f492d19bac4fc46c6d3f17" title=""><img alt="Official Tire Partner" data-assetid="127719" height="10" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/90beb568-310b-441a-b78e-ad7f9744c18d.png" style="text-align: center; height: 10px; width: 33px; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="35">
+			</td></tr><!--[if (gte mso 9)|(IE)]> </table> <![endif]--></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="sponsors" style="margin:0 auto; Padding-left:60px;" width="220">
+	<!--[if (gte mso 9)|(IE)]> <table align="center" border="0" cellpadding="0" cellspacing="0" class="sponsors" style="margin:0 auto; Padding-left:60px;" width="220"> <![endif]-->
+		<tr>
+			<td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="35">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6986d676fd25ded79da542c4dbb6836c17d849a2f9d2f9f141c0b1ea59ab2b95dedad0c884d4fc3a2ec5b77c5efcb59a1c4" title=""><img alt="Dubai Holding Entertainment" data-assetid="127721" height="22" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/ce98415d-4ff7-4359-958a-18103c706f57.png" style="text-align: center; height: 22px; width: 33px; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="35">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f6985a64a37005ae6e93b7dc2850ae4fa5892da4eb9ccdc827134c9592e8533f7f7b40ed36e684435074d501b1aac688c40c" title=""><img alt="" data-assetid="127722" height="33" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/3b8b58ba-d700-4ee1-8d83-0bde764231f6.png" style="text-align: center; height: 33px; width: 33px; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 1px; 1px; 1px;" width="35">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698e04c4cac084918d44c4c514b949e943fcad6ecd70728397dcb4381212e4a1dee5a68432471f492d19bac4fc46c6d3f17" title=""><img alt="" data-assetid="127725" height="7" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/23fc2e15-92c5-4b3f-bea6-bb6feb19593e.png" style=" height: 7px; width: 33px; text-align: center; border: 0px;" width="33"></a></td><td class="main_container" style="padding:1px; 0px; 1px; 0px;" width="35">
+				<a data-linkto="https://" href="https://click.explore.aindubai.com/?qs=faa6fc8f45f0f698cea1fc31de95945d7bfdac0544049161c049814d3360e624e558a6c5172f6ae329ad473b29a2b7c2c37e71802bad67b4" title=""><img alt="" data-assetid="127723" height="11" src="https://image.explore.dubaiholdingentertainment.com/lib/fe2d11737364047b731173/m/1/714408e0-f762-4bdc-93bd-e65b150ea3e5.png" style="text-align: center; height: 11px; width: 33px; border: 0px;" width="33"></a></td></tr><!--[if (gte mso 9)|(IE)]> </table> <![endif]--></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><p style="text-align: center;">
+	<span style="font-size:12px;"><span style="color:#565759;">If you want to unsubscribe from our mailing list, </span><a data-linkto="other" href="https://click.explore.aindubai.com/unsub_center.aspx?qs=415c68826cb764eb487d90d481e7c1e7b3b8bafea86e21b094bff463c9c1dab290a240da64cb7e380cfdbdc1d58b0c3e0ce4f1b9b9a65267d0aa472b5a82d18f" style="color:#0C0C0C;text-decoration:underline;" title="Unsubscribe here."><span style="color:#565759;">Unsubscribe here.</span></a></span></p><p style="text-align: center;">
+	<span style="font-size:12px;"><span style="color:#565759;">| </span><a data-linkto="https://" href="https://click.explore.aindubai.com/profile_center.aspx?qs=415c68826cb764eb206b0b33628f04a52c07adcca9530f7eac84346ace3c2d3617cae15b5944803aa2323f05eb39d046bbbbe6bcb0cd97350c7598f0656d42b1" style="color:#000000;text-decoration:none;" title="My Profile"><span style="color:#565759;">My Profile</span></a><span style="color:#565759;"> | </span><a data-linkto="https://" href="https://click.explore.aindubai.com/subscription_center.aspx?qs=415c68826cb764eb487d90d481e7c1e7b3b8bafea86e21b094bff463c9c1dab22df81d77de33658e0bfac01e375af9325565bebbfa31e1d8d3ac303f61896795" style="color:#000000;text-decoration:none;" title="My Preferences"><span style="color:#565759;">My Preferences</span></a><span style="color:#565759;"> | </span>
+<a alias="Contact Us" conversion="false" data-linkto="mailto:" href="mailto:amazingservice@dubaiparksandresorts.com?subject=" style="color:#000000;text-decoration:none;" title="Contact Us"><span style="color:#565759;">Contact Us</span></a></span>
+</p></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellpadding="2" cellspacing="0" width="600" id="Table5" border="0" style="display: none;"><tr><td><font face="verdana" size="1" color="#444444">This email was sent by: <b>Ain Dubai L.L.C</b><br>Bluewaters Island Dubai Dubai, Dubai, 66000, AE<br><br></font></td></tr></table><a href="https://click.explore.aindubai.com/profile_center.aspx?qs=415c68826cb764eb206b0b33628f04a52c07adcca9530f7eac84346ace3c2d3617cae15b5944803aa2323f05eb39d046bed38972c49866673b6025534fe0db8f" style="display: none;">Update Profile</a></td></tr></table>
+              
+                                                </td>
+                                              </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+           
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+--uSJePnDEhpvq=_?:--
