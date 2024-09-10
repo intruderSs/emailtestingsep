@@ -6,7 +6,6 @@ import StateFile from "./components/backendLogic/StateFile";
 import ContentTestingPage from "./components/pageslist/ContentTestingPage";
 import LinkTestingPage from "./components/pageslist/LinkTestingPage";
 import EmailLinkExtractor from '../src/components/EmailLinkExtractor';
-import CompareImage from "./components/CompareImage";
 
 const App = () => {
 
@@ -34,8 +33,8 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<LandingPage toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route>
             <Route exact path="/utm-test" element={<UTMPage toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route>
-            <Route exact path="/content-test" element={<ContentTestingPage toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route>
-            <Route exact path="/link-test" element={<LinkTestingPage toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route>
+            {/* <Route exact path="/content-test" element={<ContentTestingPage toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route>
+            <Route exact path="/link-test" element={<LinkTestingPage toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route> */}
             <Route exact path="/email" element={<EmailLinkExtractor toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route>
             {/* <Route exact path="/link" element={<PDFParser toggleAnimation={toggleAnimation} toggleMenu={toggleMenu} dark={dark} menuActive={menuActive} copyActive={copyActive} />}></Route> */}
           </Routes>

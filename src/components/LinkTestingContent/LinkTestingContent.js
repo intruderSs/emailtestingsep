@@ -10,23 +10,10 @@ function LinkTestingContent(props) {
 
   const [filteredLinks, setFilteredLinks] = useState([]);
 
-  const [linksWithTitle, setLinksWithTitle] = useState([]);
+  const [content, setContent] = useState();
+  const [type, setType] = useState();
 
-  useEffect(() => {
-    let filtered = [];
-    Links.forEach((element) => {
-      if (
-        !element.includes("view.explore") &&
-        !element.includes("aka.ms") &&
-        !element.includes("mailto")
-      ) {
-        // if (!filtered.includes(element)) {
-        filtered.push(element);
-        //}
-      }
-    });
-    setFilteredLinks(filtered);
-  }, [Links]);
+  const [linksWithTitle, setLinksWithTitle] = useState([]);
 
   ///This function is getting excel file as input and converting everything in it into key value pairs
   const handleExcelFile = (e) => {
@@ -60,55 +47,71 @@ function LinkTestingContent(props) {
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
-        const emailContent = e.target.result;
+        const fileContent = e.target.result;
+        let fileType = '';
+        
+        if (file.name.endsWith('.eml')) {
+          fileType = 'eml';
+        } else if (file.name.endsWith('.html') || file.name.endsWith('.htm')) {
+          fileType = 'html';
+        }
 
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(emailContent, "text/html");
-
-        // Extract and decode links from anchor tags
-        const anchorTags = doc.querySelectorAll("a");
-
-        const extractedLinks = Array.from(anchorTags)
-          .map((anchor) => decodeURIComponent(anchor.href))
-          .filter((link) => link.trim() !== "");
-        console.log("Extracted Liniks", extractedLinks);
-        setLinks(extractedLinks);
-
-        const linksWithTitle = Array.from(anchorTags).map((anchor) => ({
-          title: decodeURIComponent(anchor.title),
-          link: decodeURIComponent(anchor.href),
-        })).filter((link) => link.link.trim() !== "");
-        console.log(linksWithTitle);
-        let filteredWithTitle = [];
-        let neglected = [];
-        linksWithTitle.forEach((element) => {
-          if (
-            !element.link.includes("view.explore") &&
-            !element.link.includes("aka.ms") &&
-            !element.link.includes("mailto")
-          ) {
-            // if (!filtered.includes(element)) {
-            filteredWithTitle.push(element);
-            //}
-          } else {
-            neglected.push(element);
-          }
-        });
-         console.log(">>>>", filteredWithTitle);
-         setLinksWithTitle(filteredWithTitle);
-         console.log(">>>>----", neglected);
+        if (fileType) {
+          setContent(fileContent);
+          setType(fileType);
+        }     
       };
       reader.readAsText(file);
     }
   };
 
+  const getExtractedLinksWithTitle = async (content, type) => {
+    const response = await fetch(
+      `https://83051t06p5.execute-api.ap-south-1.amazonaws.com/dev/links/ExtractLinks`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        body: JSON.stringify({ fileContent: content, fileType: type }),
+      }
+    );
+    if (response.ok) {
+      const jsonData = await response.json(); // Parse JSON response from the server
+      let filtered = [];
+      jsonData.forEach((element) => {
+          if (
+            !element.link.includes("view.explore") &&
+            !element.link.includes("aka.ms") &&
+            !element.link.includes("mailto")
+          ) {
+            //if (!filtered.includes(element)) {
+              filtered.push(element);
+           // }
+          }
+      });
+      if (filtered) {
+        console.log(filtered);
+        return filtered;
+      }
+    } else {
+      console.error("Request failed with status: " + response.status);
+      return;
+    }
+  }
+
   const handleValidate = async (e) => {
+
+    const fetchedLinks = getExtractedLinksWithTitle(content, type);
+    console.log(fetchedLinks);
     const linkss = [
       { name: 'link1', link: 'https://example.com/page1' },
       { name: 'link2', link: 'https://example.com/page2' },
       // Add more key-value pairs as needed
     ];
    const linksToSend = linkss.map(({ link }) => link);
+   console.log(linksToSend);
     e.preventDefault();
     const response = await fetch(
       `https://6o4jy472i0.execute-api.ap-south-1.amazonaws.com/dev/links/getUtmAppendedLinks`,
@@ -133,8 +136,6 @@ function LinkTestingContent(props) {
       console.error("Request failed with status: " + response.status);
     }
   };
-
-  const handleSubmit = () => {};
 
   return (
     <div>

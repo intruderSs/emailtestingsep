@@ -34,14 +34,14 @@ function Header(props) {
                         {window.location.pathname !== '/utm-test' && <li>
                             <button className="customButton mx-2" onClick={navigateToUTM}>UTM Testing<span className='spans'></span></button>
                         </li>}
-                        {window.location.pathname !== '/content-test' &&
+                        {/* {window.location.pathname !== '/content-test' &&
                             <li>
                                 <button className="customButton mx-2" onClick={navigateToContent}>Content Testing<span className='spans'></span></button>
                             </li>}
                         {window.location.pathname !== '/link-test' &&
                             <li>
                                 <button onClick={navigateToLink} className="customButton mx-2">Link Testing<span className='spans'></span></button>
-                            </li>}
+                            </li>} */}
                     </ul>
                 </div>
                 <div className="overlay"></div>

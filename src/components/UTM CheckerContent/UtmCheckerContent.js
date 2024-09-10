@@ -7,12 +7,15 @@ function UtmCheckerContent(props) {
 
   const context = useContext(ContextFile);
 
-  const { parseUTMParameters, setLinks } = context;
+  const { getAllValidLinks, setLinks } = context;
 
   const [filteredLinks, setFilteredLinks] = useState([]);
 
   const [acceptanceCriteria, setAcceptanceCriteria] = useState('');
-  const [emailFile, setEmailFile] = useState('');
+  const [emailFile, setEmailFile] = useState();
+
+  const [content, setContent] = useState();
+  const [type, setType] = useState();
 
   const [doTest, setDoTest] = useState(true);
 
@@ -42,66 +45,31 @@ function UtmCheckerContent(props) {
       return 0;
     }
     if (doTest) {
-      parseUTMParameters(acceptanceCriteria);
+       getAllValidLinks(acceptanceCriteria, content, type);
       //console.log(result);
     }
   }
 
   const handleFileChange = (files) => {
-    console.log('Email file inserted and link extraction started');
     const file = files;
-
-    if (file.name.endsWith('.htm')|| file.name.endsWith('.eml')) {
+    if (file) {
       const reader = new FileReader();
-      reader.onload = (e) => {
-        const emailContent = e.target.result;
+      reader.onload = async (e) => {
+        const fileContent = e.target.result;
+        let fileType = '';
+        
+        if (file.name.endsWith('.eml')) {
+          fileType = 'eml';
+        } else if (file.name.endsWith('.html') || file.name.endsWith('.htm')) {
+          fileType = 'html';
+        }
 
-       // console.log(">>>", emailContent);
-
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(emailContent, "text/html");
-        // console.log(doc);
-
-        // Extract and decode links from anchor tags
-        const anchorTags = doc.querySelectorAll("a");
-        //console.log(anchorTags);
-
-        ////getting the text and subject content of email and storing it into local storage to use further for content testing
-        const textContent = doc.body.textContent; //.replace(/\s+/g, ' ').trim()
-       // console.log(textContent);
-
-        ////getting the subject from the email
-        const subjectRegex = /Subject:\s+\[Test\]:(.*?)(?:\n|\r|$)/;
-        const subjectMatch = textContent.match(subjectRegex);
-        const subject = subjectMatch ? subjectMatch[1].trim() : 'No Subject Found';
-      //  console.log("SUBJECT ", subject);
-        localStorage.setItem('subject', subject);
-
-        ///getting the preheader
-        const preHEaderRegEx = /Subject:\s+\[Test\]:(.*?)(?:\s{2,}\n)([\s\S]*?)\s{2,}View/;
-        const preHeaderMatch = textContent.match(preHEaderRegEx);
-        const preHeader = preHeaderMatch ? preHeaderMatch[2].trim() : 'No Preheader Found';
-       // console.log("PREHEADER ", preHeader);
-        localStorage.setItem('pre-header', preHeader);
-
-        ////merging the text all together after view online
-        const mergedText = textContent.replace(/\s+/g, ' ').trim();
-        const filteredRegEx = /View Online\s([\s\S]*)/;
-        const filteredMatch = mergedText.match(filteredRegEx);
-        const filteredContent = filteredMatch ? filteredMatch[1] : 'No Content Found';
-       // console.log("FILTERED ",filteredContent);
-        localStorage.setItem('emailContent', filteredContent);
-
-        const extractedLinks = Array.from(anchorTags).map((anchor) =>
-          decodeURIComponent(anchor.href)
-        );
-        localStorage.setItem('extractedLinks', JSON.stringify(extractedLinks));
-        setLinks(extractedLinks);
+        if (fileType) {
+          setContent(fileContent);
+          setType(fileType);
+        }        
       };
       reader.readAsText(file);
-    } else {
-      window.alert('Invalid file type. Please select a .htm file.');
-      setEmailFile();
     }
   };
 

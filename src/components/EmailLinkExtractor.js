@@ -97,7 +97,7 @@
 //   const handleValidate = async (e) => {
 //     e.preventDefault();
 //     const response = await fetch(
-//       `https://6o4jy472i0.execute-api.ap-south-1.amazonaws.com/dev/links/getUtmAppendedLinks`,
+//       https://6o4jy472i0.execute-api.ap-south-1.amazonaws.com/dev/links/getUtmAppendedLinks,
 //       {
 //         method: "POST",
 //         headers: {
@@ -149,6 +149,9 @@ import React, { useState, useEffect } from "react";
 
 function EmailLinkExtractor() {
   const [links, setLinks] = useState([]);
+
+  const [validatdLinks_Shahil, setVaidatedLinks] = useState([]);  ///for testing purpose
+
   const [filteredLinks, setFilteredLinks] = useState([]);
   const [htmlContent, setHtmlContent] = useState("");
 
@@ -171,48 +174,31 @@ function EmailLinkExtractor() {
             const response = await fetch('https://83051t06p5.execute-api.ap-south-1.amazonaws.com/dev/links/ExtractLinks', {
               method: 'POST',
               headers: {
-                'Content-Type': 'application/json',
-                "Access-Control-Allow-Origin": "*",
+                'Content-Type': 'application/json'
               },
               body: JSON.stringify({ fileContent, fileType }),
             });
-
+        
             if (response.ok) {
-              // const { htmlContent } = await response.json();
+              const  htmlContent  = await response.json();
               // parseHtmlContent(htmlContent);
-              console.log(response.json());
+              console.log('html content', htmlContent);
+              setLinks(htmlContent);
             } else {
-              console.error(`Failed to parse ${fileType} file:`, response.statusText);
+              console.error(`Failed to parse ${fileType} file:, response.statusText`);
             }
           } catch (error) {
-            console.error(`Error parsing ${fileType} file:`, error);
+            console.error(`Error parsing ${fileType} file:, error`);
           }
-        }
+        }        
       };
       reader.readAsText(file);
     }
   };
 
-  const parseHtmlContent = (htmlContent) => {
-    setHtmlContent(htmlContent);
-
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlContent, "text/html");
-
-    const anchorTags = doc.querySelectorAll("a");
-    const extractedLinks = Array.from(anchorTags).map((anchor) =>
-      decodeURIComponent(anchor.href)
-    );
-    setLinks(extractedLinks);
-
-    const linksWithTitle = Array.from(anchorTags).map((anchor) => ({
-      title: decodeURIComponent(anchor.title),
-      link: decodeURIComponent(anchor.href),
-    }));
-
-    let filteredWithTitle = [];
-    let neglected = [];
-    linksWithTitle.forEach((element) => {
+  useEffect(() => {
+    let filtered = [];
+    links.forEach((element) => {
       if (
         !element.link.includes("view.explore") &&
         !element.link.includes("profile_center") &&
@@ -221,42 +207,25 @@ function EmailLinkExtractor() {
         !element.link.includes("aka.ms") &&
         !element.link.includes("mailto")
       ) {
-        filteredWithTitle.push(element);
-      } else {
-        neglected.push(element);
+        if (!filtered.includes(element.link)) {
+            filtered.push(element.link);
+        }
       }
     });
-
-    console.log("Filtered Links:", filteredWithTitle);
-    console.log("Neglected Links:", neglected);
-  };
-
-  useEffect(() => {
-    let filtered = [];
-    links.forEach((element) => {
-      if (
-        !element.includes("view.explore") &&
-        !element.includes("profile_center") &&
-        !element.includes("subscription_center") &&
-        !element.includes("unsub_center") &&
-        !element.includes("aka.ms") &&
-        !element.includes("mailto")
-      ) {
-        filtered.push(element);
-      }
-    });
+    console.log('filtered links', filtered);
     setFilteredLinks(filtered);
   }, [links]);
 
   const handleValidate = async (e) => {
+    console.log('I am started');
     e.preventDefault();
     const response = await fetch(
-      `https://6o4jy472i0.execute-api.ap-south-1.amazonaws.com/dev/links/getUtmAppendedLinks`,
+      `https://83051t06p5.execute-api.ap-south-1.amazonaws.com/dev/marketing/cloud/linktest`,
       {
         method: "POST",
+        mode: "no-cors",
         headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ links: filteredLinks }),
       }
@@ -265,12 +234,28 @@ function EmailLinkExtractor() {
     if (response.ok) {
       const jsonData = await response.json();
       console.log("Validation Response:", jsonData);
-      const validatedLinks = jsonData.filter(link => link.includes("utm_") && !link.includes("CPC") && !link.includes("whatsapp") && !link.includes("snapchat"));
+      const validatedLinks = jsonData.filter(link => link.includes("utm_") && !link.includes('tiktok') && !link.includes('whatsapp') && !link.includes('snapchat'));
       console.log("Validated Links:", validatedLinks);
+      /////removing extra stuffs from link instead of decoding the link
+      const cleanedUrls = validatedLinks.map(url => {
+        const hasMultipleSpaces = /(%20){2,}/.test(url); // Check for multiple %20 sequences
+        const hasZeroWidthSpace = /%e2%80%8b/.test(url); // Check for %E2%80%8B
+      
+        if (hasMultipleSpaces || hasZeroWidthSpace) {
+          return url.replace(/(%20)+|(%e2%80%8b)/g, ''); // Remove the sequences if found
+        }
+        return url; // Return the original URL if no changes are needed
+      });
+      
+      console.log(cleanedUrls);
+
+
+      setVaidatedLinks(cleanedUrls);
     } else {
       console.error("Request failed with status: " + response.status);
     }
   };
+
 
   return (
     <>
@@ -280,10 +265,18 @@ function EmailLinkExtractor() {
           <h2>Extracted Links:</h2>
           <ul>
             {links.map((link, index) => (
-              <li key={index}>{link}</li>
+              <li key={index}>{link.link}</li>
             ))}
           </ul>
         </div>
+        {validatdLinks_Shahil.length != 0 && <div>
+          <h2>Validated Links:</h2>
+          <ul>
+            {validatdLinks_Shahil.map((link, index) => (
+              <li key={index}>{link}</li>
+            ))}
+          </ul>
+        </div>}
         <div className="text-center p-3">
           <button
             className="mx-3 btn"
